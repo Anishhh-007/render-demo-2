@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Classifier</title>
+</head>
+<body>
+    <h2>Email Spam Classifier</h2>
+    <form action="/predict" method="POST">
+        <label for="message">Enter the email text:</label><br>
+        <textarea name="message" rows="6" cols="40" placeholder="Type the email content here..."></textarea><br><br>
+        <input type="submit" value="Classify">
+    </form>
+    {% if prediction_text %}
+        <h3>Prediction: {{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
